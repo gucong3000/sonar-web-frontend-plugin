@@ -4,15 +4,9 @@ machine:
   environment:
     TEST: ci
 
-test:
-  post:
-    - npm run report-coverage
-
 dependencies:
   override:
     - mvn clean install -DskipTests
-  cache_directories:
-    - $HOME/.m2/repository
 
 general:
   artifacts:
