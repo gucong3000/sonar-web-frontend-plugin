@@ -1,0 +1,20 @@
+machine:
+  java:
+    version: oraclejdk8
+  # Add some environment variables
+  environment:
+    TEST: ci
+
+test:
+  post:
+    - npm run report-coverage
+
+dependencies:
+  override:
+    - mvn clean install -DskipTests
+  cache_directories:
+    - $HOME/.m2/repository
+
+test:
+  override:
+#    - mv $CIRCLE_ARTIFACTS
