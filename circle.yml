@@ -1,7 +1,6 @@
 machine:
   java:
     version: oraclejdk8
-  # Add some environment variables
   environment:
     TEST: ci
 
@@ -17,4 +16,4 @@ dependencies:
 
 test:
   override:
-#    - mv $CIRCLE_ARTIFACTS
+    - mv target $CIRCLE_ARTIFACTS
