@@ -12,6 +12,6 @@ test:
   post:
     - for x in sonar-web-frontend*; do
         if [ -e "$x/target" ]; then
-          mv -- "$x/target" $CIRCLE_ARTIFACTS/;
+          mv -- "$x/target/*.jar" $CIRCLE_ARTIFACTS/;
         fi
       done
