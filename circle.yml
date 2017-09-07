@@ -14,6 +14,6 @@ dependencies:
   cache_directories:
     - $HOME/.m2/repository
 
-test:
-  override:
-    - mv target $CIRCLE_ARTIFACTS
+general:
+  artifacts:
+    - "**/target/**/*"
